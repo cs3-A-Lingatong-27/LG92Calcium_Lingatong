@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  
+<img id="i1" src="image1.png">
+   <button id="b1" onclick="changeImage()">click me to change</button>
+   <button id="b2" onclick="revertImage()">click me to bring it back</button>
+<script>
+    function changeImage(){
+        document.getElementById("i1").src = "image2.png";
+    }
+    function revertImage(){
+        document.getElementById("i1").src = "image1.png";
+}
+    
+</script>
+<style>
+    #b1, #b2{
+        border-radius: 40px;
+        background-color: aqua;
+        font-family: 'Times New Roman', Times, serif;
+        transition: 0.2s;
+    }
+    #b1:hover, #b2:hover{
+        border-radius: 40px;
+        background-color: rgb(255, 255, 255);
+        font-weight: bold;
+        transform: scale(105%);
+        transition: 0.2s;
+    }
+    #b2{
+        margin-left: 4px;
+    }
+    #i1{
+        border-radius: 40px;
+    }
+</style>
+</body>
+</html>
